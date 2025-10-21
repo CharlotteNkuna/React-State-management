@@ -1,9 +1,9 @@
 //it uses the status state variable to determine whether to enable or disable the submit button, 
 // and whether to show the success message instead.
-import { useState } from "react";
+import { useState } from "react"; //hook
 
 export default function Quiz() {
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState(""); //manages the data that changes
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("typing");
 
@@ -31,7 +31,7 @@ export default function Quiz() {
     <>
       <h2>City quiz</h2>
       <p>
-        In which city is there a billboard that turns air into drinkable water?
+        In which city is there a table mountain?
       </p>
       <form onSubmit={handleSubmit}>
         <textarea
@@ -53,7 +53,7 @@ function submitForm(answer) {
   // Pretend it's hitting the network.
   return new Promise((resolve, reject) => { //promise is used to make code to take time to finish reading
     setTimeout(() => {
-      let shouldError = answer.toLowerCase() !== "lima"; //stringfy function anout leter case - 
+      let shouldError = answer.toLowerCase() !== "cape town"; //stringfy function anout leter case - 
       // whatever the person types, convert to lowercase anc comnpare if its liuma
       if (shouldError) {
         reject(new Error("Good guess but a wrong answer. Try again!"));
