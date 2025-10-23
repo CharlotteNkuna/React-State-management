@@ -1,5 +1,7 @@
 //Sharing state between components 
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Accordion() {
   const [activeIndex, setActiveIndex] = useState(0);

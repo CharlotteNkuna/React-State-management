@@ -1,5 +1,7 @@
 //this form has a redundant fullName state variable
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function CheckInForm() {
   const [firstName, setFirstName] = useState('');
